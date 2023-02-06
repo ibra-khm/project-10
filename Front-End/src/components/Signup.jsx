@@ -10,8 +10,8 @@ export default function Signup() {
   const {
     // showPortal,
     // setShowPortal,
-    googleLoginFun,
-    FacebookLoginFun,
+    loginWithGoogle,
+    loginWithFacebook,
     loginFun,
     registerFun,
     nameInputR,
@@ -64,7 +64,7 @@ export default function Signup() {
               dolorum aliquam, quibusdam aperiam voluptatum.
             </p>
 
-            <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+            <form className="mt-8 grid grid-cols-6 gap-6">
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="Name"
@@ -159,14 +159,7 @@ export default function Signup() {
 
 
               <div className="col-span-6">
-                <p className="text-sm text-gray-500">
-                  By creating an account, you agree to our
-                  <a href="#" className="text-gray-700 underline">
-                    terms and conditions
-                  </a>
-                  and
-                  <a href="#" className="text-gray-700 underline">privacy policy</a>.
-                </p>
+             
               </div>
 
               <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
@@ -179,7 +172,7 @@ export default function Signup() {
                 <div className=" mt-3 gap-16 flex items-center justify-center  ">
                   <GoogleLogin
                     type="icon"
-                    onSuccess={googleLoginFun}
+                    onSuccess={loginWithGoogle}
                     onError={() => {
                       console.log("Login Failed");
                     }}
@@ -194,7 +187,7 @@ export default function Signup() {
                     onFail={(error) => {
                       console.log("Login Failed!", error);
                     }}
-                    onProfileSuccess={FacebookLoginFun}
+                    onProfileSuccess={loginWithFacebook}
                   >
                     <FaFacebook className="w-5 h-5" />
                   </FacebookLogin>

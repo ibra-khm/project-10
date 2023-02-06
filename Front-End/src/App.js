@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -9,18 +8,16 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    setCount(count + 1) // infinite loop
-  }, [count])
   return (
     <>
 
-      <Header />
+      {/* <Header /> */}
+      <div className=' bg-creme  dark:bg-gray-800'>
+
       <AnimatedRoutes />
-      <Footer />
-      <hero />
+      </div>
+      {/* <Footer /> */}
     </>
   );
 }

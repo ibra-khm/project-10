@@ -21,8 +21,6 @@ return new class extends Migration
             $table->string('engine_size');
             $table->softDeletes();
             $table->timestamps();
-            
-            $table->timestamps();
         });
     }
 

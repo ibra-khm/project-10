@@ -2,7 +2,7 @@ import React from 'react'
 
 function Testimonials() {
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-100 dark:bg-gray-800">
     <div
       className="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0"
     >
@@ -69,10 +69,10 @@ function Testimonials() {
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <blockquote
-                  className="flex h-full flex-col justify-between bg-white p-12"
+                  className="flex h-full flex-col justify-between bg-white p-12 dark:bg-gray-600"
                 >
                   <div>
-                    <div className="flex gap-0.5 text-green-500">
+                    <div className="flex gap-0.5 text-green-500 dark:text-creme">
                       <svg
                         className="h-5 w-5 fill-brand"
                         viewBox="0 0 20 20"
@@ -129,7 +129,7 @@ function Testimonials() {
                         Stayin' Alive
                       </p>
 
-                      <p className="mt-4 leading-relaxed text-gray-500">
+                      <p className="mt-4 leading-relaxed text-gray-500 dark:text-creme">
                         No, Rose, they are not breathing. And they have no arms or
                         legs … Where are they? You know what? If we come across
                         somebody with no arms or legs, do we bother resuscitating
@@ -138,7 +138,7 @@ function Testimonials() {
                     </div>
                   </div>
 
-                  <footer className="mt-8 text-sm text-gray-500">
+                  <footer className="mt-8 text-sm text-gray-500 dark:text-creme">
                     &mdash; Michael Scott
                   </footer>
                 </blockquote>

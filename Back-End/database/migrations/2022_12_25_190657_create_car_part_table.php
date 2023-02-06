@@ -19,7 +19,6 @@ return new class extends Migration {
             $table->integer('quantity');
             $table->softDeletes();
             $table->timestamps();
-
             $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
             $table->foreign('part_id')->references('id')->on('parts')->onDelete('cascade');
         });

@@ -25,7 +25,7 @@ class AuthController extends Controller
         if (!$user || !Hash::check($request->password, $user->password)) {
             // if (!Auth::attempt($request->only(['email', 'password']))) {
             // return $this->error('', 'user do not exist!', 401);
-            return response()->json(['status' => 402, 'errors' => 'user do not exist!']);
+            return response()->json(['status' => 402, 'errors' => 'user does not exist!']);
         }
         return response()->json([
             'status' => 200,
@@ -60,10 +60,12 @@ class AuthController extends Controller
     }
     public function logout()
     {
+        // Auth::guard('web')->logout();
         Auth::user()->currentAccessToken()->delete();
+        // Auth::user()->tokens()->where('id', Auth::user()->currentAccessToken()->id)->delete();
         return response()->json([
             'status' => 200,
-            'message' => "adios"
+            'message' => "user logged out"
         ]);
     }
     public function user()
